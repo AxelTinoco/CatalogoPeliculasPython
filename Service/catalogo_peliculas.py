@@ -7,12 +7,12 @@ class CatalogoPeliculas:
     @classmethod
     def agregar_pelicula(cls,pelicula):
         with open(cls.ruta_archivo,'a', encoding='utf8') as archivo:
-            archivo.write(f'{pelicula.nombre}')
+            archivo.write(f'{pelicula.nombre} \n')
 
 
     @classmethod
     def listar_peliula(cls):
-        with open(cls.ruta_archivo,'r,',encoding='utf8') as archivo:
+        with open(cls.ruta_archivo,'r',encoding='utf8') as archivo:
             print('Catalogo de peliculas'.center(50,'-'))
             print(archivo.read())
 
